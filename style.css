@@ -155,6 +155,7 @@ nav ul a{
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  
 }
 
 .promo-card img {
@@ -196,7 +197,24 @@ nav ul a{
 
 .promo-card.large {
   height: 320px;
+  
 }
+
+
+.promo-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  pointer-events: none; 
+  z-index: 1;
+}
+
+
+
 .promo-card.large .promo-text{
     top: 50%;
     left: 35%;
